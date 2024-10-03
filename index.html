@@ -3,10 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Document</title>
+    <link rel="stylesheet" href="/mgm.vn/styles.css">
 </head>
 <body>
-    
+    <div class="nav-menu">
+        <a><img class="logo" src="images/mgm.svg" width="100"></a>
+        <div class="pill-nav">
+            <a class="active" href="index.html">Home</a>
+            <a href="exhibition.html">Exhibition</a>
+            <a href="contact.html">Contact</a>
+            <a href="artists.html">Artists</a>
+            <a href="about.html">About</a>
+            <a href="calendar.html">Calendar</a>
+            <a href="visit.html">Visit</a>
+        </div>
+    </div>
+    <script id="closedOpenScript">
+        function isOpen() {
+            const now = new Date();
+            const day = now.getDay();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+
+            const isOpenDay = (day >= 2 && day <= 6) || day === 0;
+        
+            const isOpenTime = (hour > 9 || (hour === 9 && minute >= 0)) && (hour < 18 || (hour === 18 && minute === 0));
+        
+            return isOpenDay && isOpenTime;
+        }
+        
+        function updateBanner() {
+            const banner = document.getElementById('status-banner');
+            if (isOpen()) {
+                banner.textContent = "We are open! Please call or message to book an appointment. Tuesday to Sunday, 9AM to 6PM";
+                banner.className = "open";
+            } else {
+                banner.textContent = "We are closed. We open Tuesday to Sunday, 9AM to 6PM";
+                banner.className = "closed";
+            }
+        }
+        window.onload = updateBanner;
+    </script>     
+    <div id="status-banner"></div>
+    <script src="script.js"></script>
 </body>
 </html>
