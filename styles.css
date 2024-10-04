@@ -30,7 +30,6 @@ body {
 }
 
 .pill-nav a {
-    font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
     font-weight: 500;
     color: black;
     text-align: center;
@@ -67,7 +66,6 @@ body {
     max-width: 2000px;
     justify-content: center;
     align-items: center;
-    font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
 }
 
 .closed {
@@ -79,7 +77,6 @@ body {
     max-width: 2000px;
     justify-content: center;
     align-items: center;
-    font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
 }
 
 .nav-links li {
