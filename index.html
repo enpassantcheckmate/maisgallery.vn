@@ -11,23 +11,33 @@
         <a><img class="logo" src="images/mgm.svg" width="100"></a>
         <div class="pill-nav">
             <a class="active" href="index.html">Home</a>
+            <div class="lineBreak"></div>
             <a href="exhibition.html">Exhibition</a>
+            <div class="lineBreak"></div>
             <a href="contact.html">Contact</a>
+            <div class="lineBreak"></div>
             <a href="artists.html">Artists</a>
+            <div class="lineBreak"></div>
             <a href="about.html">About</a>
+            <div class="lineBreak"></div>
             <a href="calendar.html">Calendar</a>
+            <div class="lineBreak"></div>
             <a href="visit.html">Visit</a>
+            <div class="lineBreak"></div>
         </div>
     </div>
     <script id="closedOpenScript">
         function isOpen() {
             const now = new Date();
-            const day = now.getDay();
-            const hour = now.getHours();
-            const minute = now.getMinutes();
-
-            const isOpenDay = (day >= 2 && day <= 6) || day === 0;
+            const utc7Offset = 7 * 60; // UTC+7 offset in minutes
+            const localOffset = now.getTimezoneOffset(); // Local offset in minutes
+            const utc7Time = new Date(now.getTime() + (utc7Offset + localOffset) * 60000);
         
+            const day = utc7Time.getDay();
+            const hour = utc7Time.getHours();
+            const minute = utc7Time.getMinutes();
+        
+            const isOpenDay = (day >= 2 && day <= 6) || day === 0;
             const isOpenTime = (hour > 9 || (hour === 9 && minute >= 0)) && (hour < 18 || (hour === 18 && minute === 0));
         
             return isOpenDay && isOpenTime;
@@ -43,6 +53,7 @@
                 banner.className = "closed";
             }
         }
+        
         window.onload = updateBanner;
     </script>     
     <div id="status-banner"></div>

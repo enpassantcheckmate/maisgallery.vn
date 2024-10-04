@@ -1,8 +1,18 @@
+body {
+    font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
+    margin: 0;
+    padding: 0;
+}
+
 .nav-menu {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
-    justify-content: center;
-    align-items: center;
+    padding: 10px 20px;
+    height: auto;
+    color: white;
+    width: 95%;
+    margin: 12px auto;
 }
 
 @media (min-width: 1200px) {
@@ -14,13 +24,9 @@
     }
 }
 
-.nav-menu {
-    height: 60px;
-}
-
-.nav-menu {
-    z-index: 1000;
-    height: 60px;
+.content {
+    margin-top: 60px; /* Ensure content starts below the nav menu */
+    padding: 20px;
 }
 
 .pill-nav a {
@@ -28,9 +34,9 @@
     font-weight: 500;
     color: black;
     text-align: center;
-    padding: 14px;
+    padding: 10px; /* Reduce padding */
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px; /* Reduce font size */
     border-radius: 20px;
     margin-bottom: 10px;
 }
@@ -76,20 +82,8 @@
     font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
 }
 
-body {
-    font-family: Montserrat, Sans-serif, Helvetica, Arial, Verdana, Serif;
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-}
-
 .nav-links li {
-    margin: 0 15px;
+    margin: 0 10px;
 }
 
 .nav-links a {
@@ -97,34 +91,10 @@ body {
     text-decoration: none;
 }
 
-.hamburger {
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 4px 0;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: #333;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-    }
+.lineBreak {
+    display: inline-block;
+    margin-top: 5px auto;
+    margin-bottom: 5px auto;
+    width: 5px;
+    height: 27px
 }
