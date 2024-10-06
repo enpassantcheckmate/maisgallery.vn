@@ -8,24 +8,16 @@ body {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    text-align: center;
     padding: 10px 20px;
     height: auto;
     color: white;
     width: 95%;
-    margin: 12px auto;
-}
-
-@media (min-width: 1200px) {
-    .nav-menu {
-        height: 70px;
-    }
-    .content {
-        margin-top: 80px;
-    }
+    margin: 5px auto;
 }
 
 .content {
-    margin-top: 60px; /* Ensure content starts below the nav menu */
+    margin-top: 60px;
     padding: 20px;
 }
 
@@ -33,11 +25,12 @@ body {
     font-weight: 500;
     color: black;
     text-align: center;
-    padding: 10px; /* Reduce padding */
+    padding: 10px;
     text-decoration: none;
-    font-size: 15px; /* Reduce font size */
+    font-size: 15px;
     border-radius: 20px;
     margin-bottom: 10px;
+    align-items: center;
 }
 
 .pill-nav a:hover {
@@ -52,31 +45,29 @@ body {
 
 #status-banner {
     padding: 10px;
-    text-align: center;
+    align-self: start;
     font-size: 20px;
     font-weight: bold;
 }
 
-.open {
-    background-color: #006E43;
+.open, .closed {
     color: white;
     border-radius: 17px;
-    margin: auto;
+    margin: 10px auto;
+    padding: 10px auto;
     width: 95%;
     max-width: 2000px;
     justify-content: center;
     align-items: center;
+    text-align: center;
+}
+
+.open {
+    background-color: #006E43;
 }
 
 .closed {
     background-color: #f44336;
-    color: white;
-    border-radius: 17px;
-    margin: auto;
-    width: 95%;
-    max-width: 2000px;
-    justify-content: center;
-    align-items: center;
 }
 
 .nav-links li {
@@ -94,4 +85,81 @@ body {
     margin-bottom: 5px auto;
     width: 5px;
     height: 27px
+}
+
+#widgetNews {
+    background-color: #004650;
+    width: 100%;
+}
+
+#widgetExhibitions {
+    background-color: #f44336;
+    width: 100%;
+}
+
+#widgetCollections {
+    background-color: #006E43;
+    width: 100%;
+}
+
+#widgetCalendar {
+    background-color: #004b77;
+    width: 100%;
+}
+
+#widgetEvents {
+    background-color: #FF9090;
+    width: 100%;
+}
+
+#widgetResources {
+    background-color: #004823;
+    width: 100%;
+}
+
+.home1, .widget1 {
+    color: white;
+    border-radius: 17px;
+    margin: 10px auto;
+    padding: 10px auto;
+    width: 47.5%;
+    max-width: 2000px;
+    justify-content: center;
+    align-items: center;
+    display: inline-table;
+    float: left;
+}
+
+.home2, .widget2 {
+    color: white;
+    border-radius: 17px;
+    margin: 10px auto;
+    padding: 10px auto;
+    width: 47.5%;
+    max-width: 2000px;
+    justify-content: center;
+    align-items: center;
+    display: inline-table;
+    float: right;
+}
+
+.home {
+    width: 97%;
+    max-width: 2000px;
+    align-items: center;
+    padding: 5px auto;
+}
+
+.home1 {
+    text-align: center;
+    margin: 12px 0 10px 10px;
+}
+
+.home2 {
+    text-align: center;
+    margin: 12px 0 10px 0;
+}
+
+a {
+    color: white;
 }
